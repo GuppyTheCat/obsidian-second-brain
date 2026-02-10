@@ -1,0 +1,55 @@
+filters:
+  and:
+    - categories.contains("Videos")
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: title
+  note.categories:
+    displayName: categories
+  note.created:
+    displayName: created
+  note.topics:
+    displayName: topics
+  note.author:
+    displayName: author
+  note.youtube_channel:
+    displayName: youtube_channel
+  note.duration:
+    displayName: duration
+  note.published:
+    displayName: published
+  note.url:
+    displayName: url
+  note.description:
+    displayName: description
+  note.clipped:
+    displayName: clipped
+views:
+  - type: table
+    name: Videos
+    order:
+      - file.name
+      - created
+      - topics
+    sort:
+      - property: url
+        direction: ASC
+    columnSize:
+      file.name: 452
+  - type: table
+    name: YouTube Channel Videos
+    filters:
+      and:
+        - youtube_channel.contains(this.file.name)
+    order:
+      - file.name
+      - created
+      - topics
+    columnSize:
+      file.name: 409
+  - type: table
+    name: Standup Comedy
+    filters:
+      and:
+        - topics.containsAny(link("Standup Comedy"), link("Standup Comedy", "Стендап"))

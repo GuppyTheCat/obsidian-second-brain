@@ -1,0 +1,52 @@
+filters:
+  and:
+    - categories.contains(link("Meetings"))
+    - '!file.path.contains("Templates/")'
+properties:
+  note.date:
+    displayName: date
+  note.people:
+    displayName: people
+  note.type:
+    displayName: type
+  file.name:
+    displayName: meeting
+  note.org:
+    displayName: org
+views:
+  - type: table
+    name: Meetings
+    order:
+      - file.name
+      - date
+      - type
+      - people
+    sort:
+      - property: date
+        direction: ASC
+  - type: table
+    name: Person
+    filters:
+      and:
+        - list(people).contains(this)
+    order:
+      - file.name
+      - date
+      - type
+      - people
+    sort:
+      - property: date
+        direction: ASC
+  - type: table
+    name: Type
+    filters:
+      and:
+        - list(type).contains(this)
+    order:
+      - file.name
+      - date
+      - people
+      - org
+    sort:
+      - property: date
+        direction: DESC

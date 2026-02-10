@@ -1,0 +1,38 @@
+filters:
+  and:
+    - categories.contains(link("Websites"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: title
+  note.categories:
+    displayName: categories
+  note.created:
+    displayName: created
+  note.url:
+    displayName: url
+  note.description:
+    displayName: description
+  note.topics:
+    displayName: topics
+views:
+  - type: table
+    name: All Websites
+    order:
+      - file.name
+      - url
+      - topics
+    sort:
+      - property: created
+        direction: DESC
+    columnSize:
+      file.name: 275
+      note.url: 302
+  - type: dynamic-views-grid
+    name: Books
+    filters:
+      and:
+        - topics.contains(link("Books"))
+    order:
+      - file.name
+      - description

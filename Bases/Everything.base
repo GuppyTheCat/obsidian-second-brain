@@ -1,0 +1,131 @@
+filters:
+  and:
+    - '!file.path.contains("Templates/")'
+formulas:
+  Embeds: if(file.embeds[0].containsAny("jpg","gif","webp","jpeg","avif"), file.embeds[0])
+  Date: if(created,created,if(start,start))
+properties:
+  note.categories:
+    displayName: categories
+  note.created:
+    displayName: created
+  note.author:
+    displayName: author
+views:
+  - type: table
+    name: All files
+    order:
+      - file.name
+      - file.path
+      - file.ext
+      - file.mtime
+  - type: cards
+    name: Images
+    filters:
+      and:
+        - '!file.ext.containsAny("base", "canvas", "pdf", "md", "js", "zip")'
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+    image: file.file
+  - type: cards
+    name: Images in posts
+    filters:
+      and:
+        - "!formula.Embeds.isEmpty()"
+    order:
+      - file.name
+      - formula.Date
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: date
+        direction: DESC
+    image: formula.Embeds
+  - type: table
+    name: to-read
+    filters:
+      and:
+        - file.tags.contains("to-read")
+        - '!file.path.contains("Templates/")'
+    groupBy:
+      property: categories
+      direction: ASC
+    order:
+      - file.name
+      - categories
+    sort:
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      file.name: 504
+  - type: list
+    name: Recent notes (list)
+    order:
+      - file.name
+      - categories
+    sort:
+      - property: file.ctime
+        direction: DESC
+    limit: 10
+    columnSize:
+      file.name: 549
+    markers: number
+    indentProperties: true
+  - type: table
+    name: Recent notes (table)
+    order:
+      - file.name
+      - categories
+    sort:
+      - property: file.ctime
+        direction: DESC
+    limit: 10
+    columnSize:
+      file.name: 549
+    markers: number
+    indentProperties: true
+  - type: list
+    name: Prompts - Resources
+    filters:
+      and:
+        - topics.contains(link("Prompts"))
+    order:
+      - file.name
+      - categories
+      - url
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 170
+    shape: square
+    layout: overlay
+    imageProperty: note.cover
+    indentProperties: true
+  - type: table
+    name: to-watch
+    filters:
+      and:
+        - file.tags.contains("to-watch")
+    order:
+      - file.name
+      - categories
+  - type: dynamic-views-grid
+    name: Omarchy (non-Software)
+    filters:
+      and:
+        - topics.contains(link("Omarchy"))
+        - '!categories.contains(link("Software"))'
+    order:
+      - file.name
+      - categories
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 170
+    titleLines: 2
+    propertyLabels: above
+    fallbackToContent: true
+    fallbackToEmbeds: always

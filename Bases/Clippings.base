@@ -1,0 +1,107 @@
+filters:
+  and:
+    - note.categories.contains(link("Clippings"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: title
+  note.author:
+    displayName: author
+  note.created:
+    displayName: created
+  note.published:
+    displayName: published
+  note.categories:
+    displayName: categories
+  note.topics:
+    displayName: topics
+  note.source:
+    displayName: source
+  note.via:
+    displayName: via
+  note.description:
+    displayName: description
+  note.subreddit:
+    displayName: subreddit
+views:
+  - type: table
+    name: Clippings
+    order:
+      - file.name
+      - categories
+      - author
+      - source
+      - via
+      - published
+      - clipped
+      - description
+      - topics
+    sort:
+      - property: created
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 241
+      note.categories: 177
+      note.author: 140
+      note.source: 106
+      note.via: 100
+      note.description: 177
+  - type: table
+    name: Author
+    filters:
+      and:
+        - list(author).contains(this)
+    order:
+      - file.name
+      - author
+      - created
+      - published
+    sort:
+      - property: clipped
+        direction: DESC
+  - type: table
+    name: tweets
+    filters:
+      and:
+        - file.tags.contains("#tweets")
+    order:
+      - file.name
+      - author
+      - twitter
+    columnSize:
+      note.author: 188
+      note.twitter: 186
+  - type: table
+    name: reddit posts
+    filters:
+      and:
+        - file.tags.contains("#reddit")
+    order:
+      - file.name
+      - author
+      - subreddit
+      - source
+      - published
+      - created
+    sort:
+      - property: created
+        direction: DESC
+    columnSize:
+      file.name: 200
+      note.author: 160
+      note.subreddit: 140
+      note.source: 120
+      note.published: 100
+  - type: table
+    name: Cursor
+    filters:
+      and:
+        - topics.contains(link("Cursor"))
+    order:
+      - file.name
+      - created
+      - topics
+    columnSize:
+      file.name: 360

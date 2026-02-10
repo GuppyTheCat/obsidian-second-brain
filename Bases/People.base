@@ -1,0 +1,59 @@
+filters:
+  and:
+    - '!file.path.contains("Templates/")'
+    - categories.contains(link("People"))
+formulas:
+  Age: (now() - birthday).years.floor()
+properties:
+  file.name:
+    displayName: name
+  note.tags:
+    displayName: tags
+  note.birthday:
+    displayName: birthday
+  note.github:
+    displayName: github
+views:
+  - type: table
+    name: All people
+    order:
+      - file.name
+      - organization
+      - birthday
+      - formula.Age
+      - url
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: tags
+        direction: ASC
+      - property: formula.Age
+        direction: DESC
+      - property: birthday
+        direction: DESC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+      formula.Age: 99
+  - type: table
+    name: Миран
+    filters:
+      and:
+        - organization.containsAny(link("Миран"), link("Миран", "Miran"))
+    order:
+      - file.name
+      - birthday
+      - formula.Age
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: tags
+        direction: ASC
+      - property: formula.Age
+        direction: DESC
+      - property: birthday
+        direction: DESC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+      formula.Age: 99

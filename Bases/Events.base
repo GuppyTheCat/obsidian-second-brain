@@ -1,0 +1,156 @@
+filters:
+  and:
+    - categories.contains(link("Events"))
+    - '!file.path.contains("Templates/")'
+properties:
+  note.end:
+    displayName: end
+  note.location:
+    displayName: location
+  note.start:
+    displayName: start
+views:
+  - type: table
+    name: Events
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Location
+    filters:
+      and:
+        - list(location).contains(this)
+    order:
+      - file.name
+      - start
+      - location
+    sort:
+      - property: start
+        direction: DESC
+  - type: table
+    name: Birthdays
+    filters:
+      and:
+        - file.tags.contains("events/birthdays")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Concerts
+    filters:
+      and:
+        - file.tags.contains("events/concerts")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Conferences
+    filters:
+      and:
+        - file.tags.contains("events/conferences")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Trips
+    filters:
+      and:
+        - file.tags.contains("events/trips")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Parties
+    filters:
+      and:
+        - file.tags.contains("events/parties")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: World
+    filters:
+      and:
+        - file.tags.contains("events/world")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Meetups
+    filters:
+      and:
+        - file.tags.contains("events/meetups")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364
+  - type: table
+    name: Interviews
+    filters:
+      and:
+        - file.tags.contains("events/interviews")
+    order:
+      - file.name
+      - start
+      - end
+      - location
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      file.name: 364

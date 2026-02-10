@@ -1,0 +1,18 @@
+filters:
+  and:
+    - categories.contains(link("Board games"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: game
+  note.rating:
+    displayName: rating
+  note.last:
+    displayName: last
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - rating
+      - last

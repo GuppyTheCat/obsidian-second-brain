@@ -1,0 +1,18 @@
+filters:
+  and:
+    - categories.contains(link("Evergreen"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: name
+  note.created:
+    displayName: created
+views:
+  - type: table
+    name: Evergreen
+    order:
+      - file.name
+      - created
+    sort:
+      - property: created
+        direction: DESC

@@ -1,0 +1,20 @@
+# Ignore all markdown files in the root directory
+/*.md
+
+# Ignored directories
+.agents/
+.obsidian/
+.stignore
+Attachments/
+Clippings/*
+Daily/
+Files/
+Temp/
+
+# Miscellaneous
+.DS_Store
+
+# Exceptions
+!README.md
+!LICENSE
+!Clippings/How I use Obsidian.md

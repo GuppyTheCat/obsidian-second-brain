@@ -1,0 +1,54 @@
+filters:
+  and:
+    - note.categories.contains(link("Guitar Tabs"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: name
+  note.song:
+    displayName: song
+  note.artist:
+    displayName: artist
+  note.album:
+    displayName: album
+  note.tuning:
+    displayName: tuning
+  note.difficulty:
+    displayName: difficulty
+  note.songsterr_url:
+    displayName: songsterr_url
+  note.ug_url:
+    displayName: ug_url
+  note.tabs:
+    displayName: tabs
+  note.created:
+    displayName: created
+views:
+  - type: table
+    name: Guitar Tabs
+    order:
+      - file.name
+      - artist
+      - song
+      - album
+      - tuning
+      - difficulty
+      - songsterr_url
+      - ug_url
+      - tabs
+      - created
+    columnSize:
+      note.artist: 197
+  - type: table
+    name: Artist Tabs
+    filters:
+      and:
+        - list(artist).contains(this)
+    order:
+      - file.name
+      - artist
+      - song
+      - album
+      - tuning
+      - difficulty
+      - created

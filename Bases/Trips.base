@@ -1,0 +1,38 @@
+filters:
+  and:
+    - note.categories.contains(link("Trips"))
+    - '!file.path.contains("Templates/")'
+properties:
+  note.start:
+    displayName: start
+  note.end:
+    displayName: end
+  file.name:
+    displayName: trip
+  note.loc:
+    displayName: location
+views:
+  - type: table
+    name: All trips
+    filters:
+      and:
+        - '!file.name.contains("Planning")'
+    order:
+      - file.name
+      - start
+      - end
+      - loc
+    sort:
+      - property: end
+        direction: DESC
+    columnSize:
+      file.name: 255
+  - type: table
+    name: Location
+    filters:
+      and:
+        - list(loc).contains(this)
+    order:
+      - file.name
+      - start
+      - end

@@ -1,0 +1,145 @@
+filters:
+  and:
+    - '!file.path.contains("Templates/")'
+    - categories.contains(link("Tasks"))
+properties:
+  file.name:
+    displayName: task
+  priority:
+    displayName: ⚡
+  status:
+    displayName: status
+  energy_level:
+    displayName: 🔋
+  contexts:
+    displayName: 📍
+  estimated_time:
+    displayName: ⏱️
+  folder:
+    displayName: 📁
+  list:
+    displayName: 📋
+  created:
+    displayName: created
+  due:
+    displayName: due
+  start_date:
+    displayName: start
+views:
+  - type: table
+    name: Today's Focus
+    filters:
+      and:
+        - status != "completed"
+        - status != "cancelled"
+        - or:
+            - due <= date(today) + dur(1 day)
+            - priority >= 3
+    order:
+      - file.name
+      - priority
+      - energy_level
+      - due
+      - contexts
+    sort:
+      - property: priority
+        direction: DESC
+      - property: energy_level
+        direction: DESC
+      - property: due
+        direction: ASC
+    columnSize:
+      file.name: 350
+      priority: 50
+      energy_level: 60
+      due: 120
+      contexts: 80
+  - type: table
+    name: Active Tasks by Project
+    filters:
+      and:
+        - status != "completed"
+        - status != "cancelled"
+        - projects.contains(this.file.name)
+    order:
+      - file.name
+      - priority
+      - energy_level
+      - due
+      - contexts
+    sort:
+      - property: priority
+        direction: DESC
+      - property: energy_level
+        direction: DESC
+      - property: due
+        direction: ASC
+    columnSize:
+      file.name: 423
+  - type: table
+    name: By Context
+    filters:
+      and:
+        - status != "completed"
+        - status != "cancelled"
+    order:
+      - file.name
+      - contexts
+      - priority
+      - energy_level
+      - due
+    sort:
+      - property: contexts
+        direction: ASC
+      - property: priority
+        direction: DESC
+      - property: energy_level
+        direction: DESC
+    columnSize:
+      file.name: 300
+      contexts: 100
+      priority: 50
+      energy_level: 60
+      due: 120
+  - type: table
+    name: Archived Tasks
+    filters:
+      and:
+        - or:
+            - status == "completed"
+            - status == "cancelled"
+    order:
+      - file.name
+      - status
+      - due
+      - created
+      - priority
+    sort:
+      - property: status
+        direction: ASC
+      - property: due
+        direction: DESC
+    columnSize:
+      file.name: 350
+      priority: 50
+  - type: table
+    name: Archived Tasks by Project
+    filters:
+      and:
+        - or:
+            - status == "completed"
+            - status == "cancelled"
+    order:
+      - file.name
+      - status
+      - due
+      - created
+      - priority
+    sort:
+      - property: status
+        direction: ASC
+      - property: due
+        direction: DESC
+    columnSize:
+      file.name: 350
+      priority: 50

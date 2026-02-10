@@ -1,0 +1,30 @@
+filters:
+  and:
+    - tags.contains("to-contribute")
+properties:
+  file.name:
+    displayName: title
+  note.categories:
+    displayName: categories
+  note.tags:
+    displayName: tags
+  note.created:
+    displayName: created
+  note.description:
+    displayName: description
+views:
+  - type: table
+    name: To Contribute
+    order:
+      - file.name
+      - categories
+      - tags
+      - description
+      - created
+    sort:
+      - property: created
+        direction: DESC
+    columnSize:
+      file.name: 342
+      note.categories: 129
+      note.description: 686

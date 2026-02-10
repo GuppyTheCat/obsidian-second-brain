@@ -1,0 +1,42 @@
+filters:
+  and:
+    - categories.contains(link("Companies"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: Note
+  note.name:
+    displayName: Name
+  note.url:
+    displayName: URL
+  note.industries:
+    displayName: Industries
+  note.people:
+    displayName: People
+  note.products:
+    displayName: Products
+  note.parent:
+    displayName: Parent
+  note.github:
+    displayName: GitHub
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - name
+      - url
+      - industries
+      - people
+      - products
+      - parent
+      - github
+    columnSize:
+      file.name: 178
+      note.name: 178
+      note.url: 270
+      note.industries: 150
+      note.people: 150
+      note.products: 150
+      note.parent: 150
+      note.github: 150

@@ -1,0 +1,285 @@
+filters:
+  and:
+    - categories.contains(link("Movies"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: name
+  note.title:
+    displayName: title
+  note.aliases:
+    displayName: aliases
+  note.last:
+    displayName: last
+  note.rating:
+    displayName: rating
+  note.year:
+    displayName: year
+  note.director:
+    displayName: director
+  note.genre:
+    displayName: genre
+  note.cast:
+    displayName: cast
+  note.scoreImdb:
+    displayName: imdb
+  note.scoreKp:
+    displayName: kp
+  note.urlKp:
+    displayName: kp_link
+  note.scoreRT:
+    displayName: rt
+  note.runtime:
+    displayName: runtime
+  note.watchlist:
+    displayName: added
+views:
+  - type: table
+    name: All
+    filters:
+      and:
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - director
+      - rating
+      - scoreKp
+      - scoreImdb
+      - last
+      - plot
+      - genre
+    sort:
+      - property: director
+        direction: ASC
+      - property: plot
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.director: 205
+      note.plot: 233
+      note.genre: 261
+  - type: dynamic-views-grid
+    name: To-watch-grid
+    filters:
+      and:
+        - file.tags.contains("to-watch")
+    order: []
+    imageProperty: note.cover
+    cardSize: 180
+    hoverStyle: none
+    fallbackToContent: false
+    titleLines: 3
+    fallbackToEmbeds: always
+    imageFormat: poster
+    propertyLabels: above
+    urlProperty: url
+    minimumColumns: two
+    imageRatio: 1.45
+    imageFit: crop
+  - type: table
+    name: To-watch
+    filters:
+      and:
+        - last.isEmpty()
+        - rating.isEmpty()
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - scoreImdb
+      - scoreKp
+      - scoreRT
+      - runtime
+      - watchlist
+      - director
+      - genre
+    sort:
+      - property: scoreImdb
+        direction: DESC
+      - property: scoreKp
+        direction: DESC
+      - property: scoreRT
+        direction: DESC
+      - property: watchlist
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: director
+        direction: ASC
+    columnSize:
+      file.name: 283
+      note.year: 173
+      note.scoreRT: 67
+      note.director: 238
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - note.rating > 6
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - director
+      - year
+      - genre
+      - rating
+      - scoreKp
+      - ratingImdb
+      - last
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: ratingImdb
+        direction: DESC
+    columnSize:
+      file.name: 283
+      note.director: 221
+      note.year: 68
+  - type: table
+    name: Last seen
+    filters:
+      and:
+        - "!last.isEmpty()"
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - rating
+      - last
+      - director
+      - genre
+    sort:
+      - property: last
+        direction: DESC
+      - property: file.name
+        direction: ASC
+    limit: 20
+  - type: table
+    name: Actor
+    filters:
+      and:
+        - list(cast).contains(this)
+    order:
+      - file.name
+      - year
+      - director
+      - genre
+      - ratingImdb
+    sort:
+      - property: ratingImdb
+        direction: DESC
+  - type: table
+    name: Genre
+    filters:
+      and:
+        - list(genre).contains(this)
+    order:
+      - file.name
+      - rating
+      - year
+      - director
+      - last
+      - genre
+    sort:
+      - property: last
+        direction: DESC
+      - property: genre
+        direction: ASC
+      - property: rating
+        direction: DESC
+    columnSize:
+      note.director: 166
+      note.last: 115
+  - type: table
+    name: Director
+    filters:
+      and:
+        - list(director).contains(this)
+    order:
+      - file.name
+      - year
+      - rating
+      - last
+      - cast
+      - genre
+    sort:
+      - property: last
+        direction: DESC
+      - property: rating
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 186
+      note.year: 79
+      note.rating: 96
+      note.genre: 243
+  - type: table
+    name: Soundtrack
+    filters:
+      and:
+        - list(music).contains(this)
+    order:
+      - file.name
+      - year
+      - rating
+      - last
+      - cast
+      - genre
+    sort:
+      - property: last
+        direction: DESC
+      - property: rating
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 186
+      note.year: 79
+      note.rating: 96
+      note.genre: 243
+  - type: table
+    name: Theater
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - file.name
+      - rating
+      - last
+      - year
+      - scoreImdb
+      - runtime
+      - scoreRT
+      - watchlist
+      - director
+      - genre
+    sort:
+      - property: last
+        direction: DESC
+      - property: scoreImdb
+        direction: DESC
+      - property: scoreRT
+        direction: DESC
+      - property: watchlist
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: director
+        direction: ASC
+    columnSize:
+      file.name: 283
+      note.rating: 94
+      note.year: 68
+      note.scoreRT: 67
+      note.director: 238
+      note.genre: 243
+  - type: carousel
+    name: To-watch-carousel
+    filters:
+      and:
+        - file.tags.contains("to-watch")
+    imageProperty: note.cover
+    cardSize: 200
+    hoverStyle: none

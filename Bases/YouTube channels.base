@@ -1,0 +1,30 @@
+filters:
+  and:
+    - categories.contains(link("YouTube Channels"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: title
+  note.categories:
+    displayName: categories
+  note.created:
+    displayName: created
+  note.topics:
+    displayName: topics
+  note.published:
+    displayName: published
+  note.tags:
+    displayName: tags
+views:
+  - type: table
+    name: All channels
+    order:
+      - file.name
+      - url
+      - created
+      - description
+      - topics
+      - tags
+      - aliases
+    columnSize:
+      file.name: 293

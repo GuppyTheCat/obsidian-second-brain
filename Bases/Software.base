@@ -1,0 +1,52 @@
+filters:
+  and:
+    - categories.contains(link("Software"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: Name
+  description:
+    displayName: Description
+  url:
+    displayName: URL
+  github:
+    displayName: GitHub
+  topics:
+    displayName: Topics
+  interfaces:
+    displayName: Interfaces
+  platforms:
+    displayName: Platforms
+views:
+  - type: table
+    name: Software
+    order:
+      - file.name
+  - type: table
+    name: Obsidian plugins
+    filters:
+      and:
+        - topics.contains(link("Obsidian plugins"))
+    cardSize: 130
+  - type: table
+    name: Obsidian themes
+    filters:
+      and:
+        - topics.contains(link("Obsidian themes"))
+  - type: table
+    name: Obsidian browser extensions
+    filters:
+      and:
+        - topics.containsAll(link("Obsidian"), link("Browser extensions"))
+  - type: dynamic-views-grid
+    name: Omarchy
+    filters:
+      or:
+        - dependencies.contains(link("Omarchy"))
+        - topics.contains(link("Omarchy"))
+    order:
+      - file.name
+    cardSize: 160
+    titleLines: 2
+    propertyLabels: above
+    fallbackToContent: true

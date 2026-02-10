@@ -1,0 +1,68 @@
+filters:
+  or:
+    - file.name.contains(this.file.name)
+    - created.toString().contains(this.file.name)
+    - start.toString().contains(this.file.name)
+    - end.toString().contains(this.file.name)
+    - file.links.contains(this.file)
+    - dateCreated.toString().contains(this.file.name)
+properties:
+  file.name:
+    displayName: entry
+  note.categories:
+    displayName: categories
+  note.created:
+    displayName: created
+  note.tags:
+    displayName: tags
+views:
+  - type: table
+    name: Daily notes
+    filters:
+      or:
+        - '!file.tags.containsAny("daily", "monthly")'
+    order:
+      - file.name
+      - categories
+      - tags
+    sort:
+      - property: created
+        direction: ASC
+      - property: tags
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: categories
+        direction: ASC
+    columnSize:
+      file.name: 410
+      note.categories: 180
+      note.tags: 199
+  - type: table
+    name: Monthly
+    filters:
+      and:
+        - '!tags.contains("daily")'
+        - '!tags.contains("monthly")'
+    order:
+      - file.name
+      - categories
+      - created
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: created
+        direction: DESC
+  - type: table
+    name: Yearly
+    filters:
+      and:
+        - '!tags.contains("daily")'
+        - '!tags.contains("monthly")'
+    order:
+      - file.name
+      - categories
+      - created
+    sort:
+      - property: created
+        direction: ASC

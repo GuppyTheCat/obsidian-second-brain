@@ -1,0 +1,40 @@
+filters:
+  and:
+    - categories.contains("YouTube Video")
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: title
+  note.categories:
+    displayName: categories
+  note.created:
+    displayName: created
+  note.topics:
+    displayName: topics
+  note.author:
+    displayName: author
+  note.youtube_channel:
+    displayName: youtube_channel
+  note.duration:
+    displayName: duration
+  note.published:
+    displayName: published
+  note.url:
+    displayName: url
+  note.description:
+    displayName: description
+  note.clipped:
+    displayName: clipped
+views:
+  - type: table
+    name: YouTube Videos
+    order:
+      - file.name
+      - created
+      - topics
+      - duration
+    sort:
+      - property: published
+        direction: DESC
+    columnSize:
+      file.name: 452

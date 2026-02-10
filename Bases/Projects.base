@@ -1,0 +1,158 @@
+filters:
+  and:
+    - '!file.path.contains("Templates/")'
+    - categories.contains(link("Projects"))
+    - file.name != link("Пример проекта - Организация отпуска")
+properties:
+  file.name:
+    displayName: project
+  status:
+    displayName: status
+  priority:
+    displayName: ⚡
+  area:
+    displayName: area
+  folder:
+    displayName: 📁
+  list:
+    displayName: 📋
+  energy_level:
+    displayName: 🔋
+  start_date:
+    displayName: start
+  due_date:
+    displayName: due
+  year:
+    displayName: year
+  url:
+    displayName: url
+  cover:
+    displayName: cover
+  icon:
+    displayName: icon
+  color:
+    displayName: color
+views:
+  - type: table
+    name: All
+    groupBy:
+      property: area
+      direction: ASC
+    order:
+      - file.name
+      - status
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 576
+  - type: table
+    name: Personal
+    filters:
+      and:
+        - area == "Personal"
+    order:
+      - file.name
+      - status
+      - year
+      - url
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 209
+      status: 199
+  - type: table
+    name: Second Brain
+    filters:
+      and:
+        - area == "Second Brain"
+    order:
+      - file.name
+      - status
+      - year
+      - url
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 209
+      status: 199
+  - type: table
+    name: Work
+    filters:
+      and:
+        - area == "Work"
+    order:
+      - file.name
+      - status
+      - year
+      - url
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 209
+      status: 199
+  - type: table
+    name: Home
+    filters:
+      and:
+        - area == "Home"
+    order:
+      - file.name
+      - status
+      - year
+      - url
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 209
+      status: 199
+  - type: table
+    name: Health
+    filters:
+      and:
+        - area == "Health"
+    order:
+      - file.name
+      - status
+      - year
+      - url
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 209
+      status: 199
+  - type: table
+    name: All active
+    filters:
+      and:
+        - '!status.containsAny("done", "rejected")'
+    groupBy:
+      property: area
+      direction: ASC
+    order:
+      - file.name
+      - status
+    sort:
+      - property: status
+        direction: ASC
+      - property: year
+        direction: DESC
+    columnSize:
+      file.name: 576

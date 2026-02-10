@@ -1,0 +1,49 @@
+filters:
+  and:
+    - categories.contains(link("Tasks"))
+    - '!file.path.contains("Templates/")'
+    - status != "done"
+    - status != "rejected"
+views:
+  - type: tasknotesTaskList
+    name: High Energy
+    filters:
+      and:
+        - or:
+            - contexts.contains("@high-energy")
+            - list(contexts).filter(value == "@low-energy").isEmpty()
+    order:
+      - status
+      - priority
+      - due
+      - scheduled
+      - projects
+      - contexts
+      - file.tags
+      - blockedBy
+      - file.name
+      - recurrence
+      - complete_instances
+    sort:
+      - property: due
+        direction: ASC
+  - type: tasknotesTaskList
+    name: Low Energy
+    filters:
+      and:
+        - contexts.contains("@low-energy")
+    order:
+      - status
+      - priority
+      - due
+      - scheduled
+      - projects
+      - contexts
+      - file.tags
+      - blockedBy
+      - file.name
+      - recurrence
+      - complete_instances
+    sort:
+      - property: due
+        direction: ASC

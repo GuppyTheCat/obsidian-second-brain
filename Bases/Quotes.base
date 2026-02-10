@@ -1,0 +1,31 @@
+filters:
+  and:
+    - note.categories.contains(link("Quotes"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: Quote
+  note.attribution:
+    displayName: Author
+  note.source:
+    displayName: Source
+  note.topics:
+    displayName: Topics
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - attribution
+      - source
+      - topics
+      - created
+    sort:
+      - property: created
+        direction: DESC
+    columnSize:
+      file.name: 239
+      note.attribution: 133
+      note.source: 221

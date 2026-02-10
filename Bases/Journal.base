@@ -1,0 +1,22 @@
+filters:
+  and:
+    - '!file.path.contains("Templates/")'
+    - categories.contains(link("Journal"))
+properties:
+  file.name:
+    displayName: entry
+  note.created:
+    displayName: created
+views:
+  - type: table
+    name: All notes
+    order:
+      - file.name
+      - created
+    columnSize:
+      file.name: 554
+  - type: table
+    name: Software notes
+    filters:
+      and:
+        - topics.contains(link("Software"))

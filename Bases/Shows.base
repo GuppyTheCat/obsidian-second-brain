@@ -1,0 +1,144 @@
+filters:
+  and:
+    - categories.contains(link("Shows"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: name
+  note.title:
+    displayName: title
+  note.aliases:
+    displayName: aliases
+  note.last:
+    displayName: last
+  note.rating:
+    displayName: rating
+  note.year:
+    displayName: year
+  note.director:
+    displayName: director
+  note.genre:
+    displayName: genre
+  note.cast:
+    displayName: cast
+  note.scoreImdb:
+    displayName: imdb
+  note.scoreKp:
+    displayName: kp
+  note.urlKp:
+    displayName: kp_link
+  note.status:
+    displayName: status
+  note.seasons:
+    displayName: seasons
+  note.watchlist:
+    displayName: added
+views:
+  - type: table
+    name: All
+    filters:
+      and:
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - director
+      - rating
+      - scoreKp
+      - scoreImdb
+      - status
+      - last
+      - genre
+    sort:
+      - property: rating
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: director
+        direction: ASC
+  - type: table
+    name: To-watch
+    filters:
+      and:
+        - last.isEmpty()
+        - rating.isEmpty()
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - scoreImdb
+      - scoreKp
+      - status
+      - watchlist
+      - director
+      - genre
+    sort:
+      - property: scoreImdb
+        direction: DESC
+      - property: scoreKp
+        direction: DESC
+      - property: watchlist
+        direction: DESC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - note.rating > 6
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - rating
+      - scoreKp
+      - last
+      - director
+      - genre
+  - type: table
+    name: Last seen
+    filters:
+      and:
+        - not(empty(note.last))
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - year
+      - rating
+      - last
+      - director
+      - genre
+    sort:
+      - property: last
+        direction: DESC
+    limit: 20
+  - type: table
+    name: Actor
+    filters:
+      and:
+        - list(cast).contains(this)
+    order:
+      - file.name
+      - year
+      - director
+      - genre
+  - type: table
+    name: Genre
+    filters:
+      and:
+        - list(genre).contains(this)
+    order:
+      - file.name
+      - year
+      - director
+      - genre
+  - type: table
+    name: Director
+    filters:
+      and:
+        - list(director).contains(this)
+    order:
+      - file.name
+      - year
+      - cast
+      - genre
