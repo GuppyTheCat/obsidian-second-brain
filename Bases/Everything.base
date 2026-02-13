@@ -129,3 +129,18 @@ views:
     propertyLabels: above
     fallbackToContent: true
     fallbackToEmbeds: always
+  - type: table
+    name: Me
+    filters:
+      or:
+        - author.contains(link("Me"))
+        - topics.contains(link("Me"))
+        - developer.contains(link("Me"))
+    groupBy:
+      property: categories
+      direction: ASC
+    order:
+      - file.name
+      - categories
+    columnSize:
+      file.name: 462
