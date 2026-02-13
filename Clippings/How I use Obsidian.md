@@ -5,9 +5,6 @@ categories:
 author:
   - "[[Steph Ango]]"
 source: https://stephango.com/vault
-via: ""
-created: 2026-01-03T18:06:46+03:00
-published:
 description: My personal Obsidian vault template. A bottom-up approach to note-taking and organizing things I am interested in.
 topics:
   - "[[Ведение заметок]]"
@@ -16,6 +13,9 @@ topics:
   - "[[Minimal]]"
   - "[[Minimal Documentation]]"
   - "[[Flexoki (Step Ango Blog)]]"
+via: "[[How the CEO of Obsidian Takes his Notes (Underrated Genius)]]"
+published:
+created: 2026-01-03T18:06:46+03:00
 ---
 I use [Obsidian](https://stephango.com/obsidian) to think, take notes, write essays, and publish this site. This is my bottom-up approach to note-taking and organizing things I am interested in. It embraces chaos and laziness to create emergent structure.
 
