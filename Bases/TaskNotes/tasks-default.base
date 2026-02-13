@@ -224,9 +224,13 @@ views:
       - recurrence
       - complete_instances
     sort:
+      - property: formula.priorityWeight
+        direction: DESC
+      - property: scheduled
+        direction: ASC
       - property: due
         direction: ASC
-      - property: scheduled
+      - property: formula.trackingStatus
         direction: ASC
   - type: tasknotesTaskList
     name: Work/all
@@ -253,7 +257,7 @@ views:
       and:
         - file.tags.contains("work")
         - status.containsAny("done", "rejected")
-        - formula.isScheduledToday == true
+        - formula.isToday
     order:
       - status
       - priority
