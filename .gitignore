@@ -4,15 +4,16 @@
 # Ignored directories
 .agents/
 .obsidian/
-.stignore
 Attachments/
 Clippings/*
 Daily/
 Files/
+Telegram/
 Temp/
 
 # Miscellaneous
 .DS_Store
+.stignore
 
 # Exceptions
 !README.md
