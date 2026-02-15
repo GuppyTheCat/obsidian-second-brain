@@ -1,9 +1,10 @@
 ---
 categories:
-- '[[Journal]]'
+  - "[[Journal]]"
 topics:
-- '[[Obsidian]]'
-- '[[Ведение заметок]]'
+  - "[[Obsidian]]"
+  - "[[Ведение заметок]]"
+  - "[[My Second Brain]]"
 created: 2026-01-09
 tags:
   - reference
