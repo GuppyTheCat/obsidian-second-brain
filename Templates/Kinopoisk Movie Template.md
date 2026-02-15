@@ -8,18 +8,20 @@ aliases:
 cover: "{{posterUrl}}"
 genre: [{{genresLinks}}]
 countries: [{{countriesLinks}}]
-director: [{{director}}]
+director: ["{{director}}"]
 cast: []
-rating:
+rating: null
 imdb_score: {{ratingImdb}}
 kinopoisk_score: {{ratingKp}}
 kinopoisk_url: "{{kinopoiskUrl}}"
 year: {{year}}
 runtime: {{movieLength}}
-plot: "{{description}}"
 tags:
-  - movies
   - to-watch
 created: <%tp.date.now("YYYY-MM-DD")%>
-via:
+via: ""
 ---
+
+## Сюжет
+
+{{description}}

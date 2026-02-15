@@ -1,23 +1,23 @@
 ---
 categories:
-  - "[[Movies]]"
-title:
-aliases:
-cover:
-genre: []
-countries: []
-director: []
+- '[[Movies]]'
+title: null
+aliases: null
 cast: []
-rating:
-imdb_score:
-kinopoisk_score:
-kinopoisk_url:
-year:
-runtime:
-plot:
-tags:
-  - movies
-  - to-watch
+countries: []
+cover: null
+director: []
+genre: []
+imdb_score: null
+kinopoisk_score: null
+kinopoisk_url: null
+plot: null
+rating: null
+runtime: null
+via: null
+year: null
 created: <%tp.date.now("YYYY-MM-DD")%>
-via:
+tags:
+- movies
+- to-watch
 ---

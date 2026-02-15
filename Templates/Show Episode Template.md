@@ -1,23 +1,23 @@
 ---
 categories:
-  - "[[Show episodes]]"
-title:
-aliases:
-show:
-season:
-episode:
-cover:
-genre: []
-director: []
+- '[[Show episodes]]'
+title: null
+aliases: null
 cast: []
-rating:
-imdb_score:
-kinopoisk_score:
-kinopoisk_url: 
-plot:
-published:
-tags:
-  - episode
+cover: null
+director: []
+episode: null
+genre: []
+imdb_score: null
+kinopoisk_score: null
+kinopoisk_url: null
+plot: null
+rating: null
+season: null
+show: null
+via: null
+published: null
 created: <%tp.date.now("YYYY-MM-DD")%>
-via:
+tags:
+- episode
 ---

@@ -1,26 +1,26 @@
 ---
 categories:
-  - "[[Shows]]"
-title:
-aliases:
-cover:
-genre: []
-countries: []
-director: []
+- '[[Shows]]'
+title: null
+aliases: null
 cast: []
-rating:
-imdb_score:
-kinopoisk_score:
-kinopoisk_url: 
-year:
-seasons:
-episodes_per_season:
-episode_length:
-status:
-plot:
-tags:
-  - shows
-  - to-watch
+countries: []
+cover: null
+director: []
+episode_length: null
+episodes_per_season: null
+genre: []
+imdb_score: null
+kinopoisk_score: null
+kinopoisk_url: null
+plot: null
+rating: null
+seasons: null
+status: null
+via: null
+year: null
 created: <%tp.date.now("YYYY-MM-DD")%>
-via:
+tags:
+- shows
+- to-watch
 ---
