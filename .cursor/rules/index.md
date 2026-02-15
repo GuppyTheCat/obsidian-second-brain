@@ -10,6 +10,10 @@ This is the main rule index for Cursor AI assistance in the Second Brain project
 - **[Scripts](sections/scripts.md)** - Script organization, utilities, and development patterns
 - **[Maintenance](sections/maintenance.md)** - How to maintain and update these cursor rules
 
+## Project skills
+
+- **frontmatter-order** (`.cursor/skills/frontmatter-order/`) — Reorders YAML frontmatter in vault notes to match the Templates frontmatter property order. Use when the user wants to update or normalize frontmatter order across all notes (or a subset).
+
 ## Overview
 
 These rules ensure consistency, maintainability, and best practices across the Second Brain codebase. When working with this project:
