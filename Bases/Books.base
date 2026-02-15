@@ -32,6 +32,8 @@ views:
       - rating
       - last
     sort:
+      - property: file.name
+        direction: DESC
       - property: last
         direction: DESC
   - type: table
@@ -55,3 +57,67 @@ views:
       - file.name
       - year
       - genre
+  - type: cards
+    name: Books (cards)
+    order:
+      - file.name
+      - author
+    sort:
+      - property: file.name
+        direction: ASC
+    image: note.cover
+    imageAspectRatio: 1.55
+    cardSize: 200
+    imageFit: contain
+  - type: dynamic-views-grid
+    name: Books (cards) 2 2 2
+    order:
+      - file.embeds
+      - author
+    sort:
+      - property: file.name
+        direction: ASC
+    image: note.cover
+    imageAspectRatio: 1.55
+    imageProperty: cover
+    cardSize: 210
+    fallbackToEmbeds: always
+    imageFormat: cover
+    showPropertiesAbove: false
+    textPreviewLines: 3
+    titleLines: 3
+    minimumColumns: two
+    imagePosition: top
+    imageFit: contain
+    fallbackToContent: false
+    titleProperty: title
+    subtitleProperty: ""
+    imageRatio: 1.35
+    propertyLabels: hide
+    pairProperties: false
+  - type: dynamic-views-grid
+    name: Books (cards) 2 2 2 2
+    order:
+      - author
+      - file.embeds
+    sort:
+      - property: file.name
+        direction: ASC
+    image: note.cover
+    imageAspectRatio: 1.55
+    imageProperty: cover
+    cardSize: 210
+    fallbackToEmbeds: always
+    imageFormat: poster
+    showPropertiesAbove: false
+    textPreviewLines: 3
+    titleLines: 3
+    minimumColumns: two
+    imagePosition: top
+    imageFit: crop
+    fallbackToContent: false
+    titleProperty: title
+    subtitleProperty: ""
+    imageRatio: 1.55
+    propertyLabels: hide
+    pairProperties: false
