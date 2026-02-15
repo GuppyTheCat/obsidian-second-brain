@@ -1,16 +1,16 @@
 ---
-status: open
-priority: normal
+categories: '[[Tasks]]'
 contexts:
-  - "@anywhere"
+- '@anywhere'
 dateCreated: <%tp.date.now("YYYY-MM-DDTHH:mm:ss")%>+03:00
 dateModified: <%tp.date.now("YYYY-MM-DDTHH:mm:ss")%>+03:00
-categories: "[[Tasks]]"
+due: null
+priority: normal
 projects: []
+scheduled: null
+status: open
 tags:
-  - second-brain
-due:
-scheduled:
+- second-brain
 ---
 
 <!-- Inherits from Task Template. Same properties; English headings and prompts for Second Brain. -->

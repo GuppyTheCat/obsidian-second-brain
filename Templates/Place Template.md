@@ -1,8 +1,8 @@
 ---
 categories:
-  - "[[Places]]"
-type: []
+- '[[Places]]'
 loc: []
-rating:
+rating: null
+type: []
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---

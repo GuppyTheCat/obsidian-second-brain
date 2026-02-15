@@ -1,8 +1,8 @@
 ---
-categories: 
-  - "[[Conference sessions]]"
-conference: 
-speaker: 
+categories:
+- '[[Conference sessions]]'
+conference: null
+rating: null
+speaker: null
 topics: []
-rating: 
 ---

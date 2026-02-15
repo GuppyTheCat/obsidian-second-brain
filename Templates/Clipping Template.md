@@ -1,11 +1,11 @@
 ---
 categories:
-  - "[[Clippings]]"
+- '[[Clippings]]'
 author: []
-source: ""
-via: ""
-created: <%tp.date.now("YYYY-MM-DD")%>
-published: 
+source: ''
 topics: []
+via: ''
+published: null
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 

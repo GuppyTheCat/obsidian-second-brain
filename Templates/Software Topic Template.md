@@ -1,10 +1,10 @@
 ---
 categories:
-  - "[[Journal]]"
-created: <%tp.date.now("YYYY-MM-DD")%>
+- '[[Journal]]'
 aliases: []
 topics:
-  - "[[Software]]"
+- '[[Software]]'
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 
 ```datacorejsx

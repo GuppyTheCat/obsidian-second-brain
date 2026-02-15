@@ -1,9 +1,9 @@
 ---
 categories:
-  - "[[Quotes]]"
+- '[[Quotes]]'
 attribution: []
-source:
-created: <%tp.date.now("YYYY-MM-DD")%>
+source: null
 topics: []
-via:
+via: null
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---

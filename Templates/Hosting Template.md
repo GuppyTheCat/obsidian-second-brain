@@ -1,9 +1,9 @@
 ---
 categories:
-  - "[[Hosting]]"
-start:
-end:
-loc:
+- '[[Hosting]]'
+end: null
+loc: null
 people: []
+start: null
 ---
 

@@ -1,9 +1,9 @@
 ---
 categories:
-  - "[[Places]]"
+- '[[Places]]'
+loc: null
+rating: null
 type:
-  - "[[Restaurants]]"
-loc:
-rating:
+- '[[Restaurants]]'
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---

@@ -1,17 +1,17 @@
 ---
 categories:
-  - "[[Books]]"
+- '[[Books]]'
 author: []
-cover:
+cover: null
 genre: []
-pages:
-isbn:
-isbn13:
-year:
-rating:
+isbn: null
+isbn13: null
+pages: null
+rating: null
 topics: []
+via: ''
+year: null
 created: <%tp.date.now("YYYY-MM-DD")%>
-via: ""
 tags:
-  - to-read
+- to-read
 ---

@@ -1,11 +1,11 @@
 ---
 categories:
-  - "[[Podcast episodes]]"
-show: 
-guests: 
+- '[[Podcast episodes]]'
+episode: null
+guests: null
+rating: null
+show: null
 topics: []
-episode: 
-url: 
-rating: 
-published: 
+url: null
+published: null
 ---

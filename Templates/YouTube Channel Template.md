@@ -1,11 +1,11 @@
 ---
 categories:
-  - "[[YouTube Channels]]"
-url: ""
-created: <%tp.date.now("YYYY-MM-DD")%>
-published:
-description: ""
+- '[[YouTube Channels]]'
+description: ''
 topics: []
+url: ''
+published: null
+created: <%tp.date.now("YYYY-MM-DD")%>
 tags: []
 ---
 

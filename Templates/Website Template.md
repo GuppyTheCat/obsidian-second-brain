@@ -1,10 +1,10 @@
 ---
 categories:
-  - "[[Websites]]"
-url: ""
-created: <%tp.date.now("YYYY-MM-DD")%>
-description: ""
+- '[[Websites]]'
+description: ''
 topics: []
+url: ''
+created: <%tp.date.now("YYYY-MM-DD")%>
 tags: []
 ---
 

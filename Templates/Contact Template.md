@@ -1,7 +1,7 @@
 ---
 categories:
-  - "[[People]]"
-phone:
-twitter:
-organization:
+- '[[People]]'
+organization: null
+phone: null
+twitter: null
 ---

@@ -1,8 +1,8 @@
 ---
 categories:
-  - "[[Board games]]"
+- '[[Board games]]'
+maker: null
+rating: null
 type: []
-maker:
-year:
-rating:
+year: null
 ---

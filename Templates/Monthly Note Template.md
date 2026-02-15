@@ -1,10 +1,10 @@
 ---
 aliases:
-  - July 2023
-previous: "[[2023-06]]"
-next: "[[2023-08]]"
-tags: 
-  - monthly
+- July 2023
+next: '[[2023-08]]'
+previous: '[[2023-06]]'
+tags:
+- monthly
 ---
 ## Entries
 

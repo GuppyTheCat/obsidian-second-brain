@@ -1,16 +1,16 @@
 ---
-title: <%tp.file.title%>
 categories:
-  - "[[Software]]"
-description: ""
-developer:
-url: ""
-github: ""
-docs: []
-created: <%tp.date.now("YYYY-MM-DD")%>
-topics: []
+- '[[Software]]'
+title: <%tp.file.title%>
 dependencies: []
+description: ''
+developer: null
+docs: []
+github: ''
 interfaces: []
 platforms: []
+topics: []
+url: ''
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 

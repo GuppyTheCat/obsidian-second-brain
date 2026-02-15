@@ -1,9 +1,9 @@
 ---
-tags:
-  - categories
 aliases:
-  - Гитарные табы
-  - гитарные табы
+- Гитарные табы
+- гитарные табы
+tags:
+- categories
 ---
 
 ## Tabs

@@ -1,8 +1,8 @@
 ---
 categories:
-  - "[[Food]]"
-maker:
-rating:
-price:
+- '[[Food]]'
+maker: null
+price: null
+rating: null
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---

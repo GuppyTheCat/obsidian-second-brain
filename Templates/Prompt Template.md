@@ -1,10 +1,10 @@
 ---
 categories:
-  - "[[Prompts]]"
+- '[[Prompts]]'
+prompt: ''
+status: active
 topics: []
 created: <%tp.date.now("YYYY-MM-DD")%>
-status: active
-prompt: ""
 ---
 
 # <%tp.file.title%>

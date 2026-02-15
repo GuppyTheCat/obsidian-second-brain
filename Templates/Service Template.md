@@ -1,16 +1,16 @@
 ---
-title: <%tp.file.title%>
 categories:
-  - "[[Software]]"
-  - "[[Websites]]"
-  # - "[[Companies]]"
-description: ""
-url: ""
-github: ""
-created: <%tp.date.now("YYYY-MM-DD")%>
-topics: []
+- '[[Software]]'
+- '[[Websites]]'
+title: <%tp.file.title%>
+description: ''
+github: ''
 industries: []
-platforms: [Web]
+platforms:
+- Web
+topics: []
+url: ''
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 
 ## Overview

@@ -1,8 +1,8 @@
 ---
 categories:
-  - "[[Trips]]"
-start:
-end:
-loc:
+- '[[Trips]]'
+end: null
+loc: null
+start: null
 ---
 

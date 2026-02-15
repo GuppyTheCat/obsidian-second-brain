@@ -1,10 +1,10 @@
 ---
 categories:
-  - "[[Albums]]"
+- '[[Albums]]'
+artist: ''
 genre: []
-artist: ""
-year:
+rating: null
+year: null
 created: <%tp.date.now("YYYY-MM-DD")%>
-rating:
 ---
 

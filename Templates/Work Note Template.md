@@ -1,11 +1,11 @@
 ---
 categories:
-  - "[[Journal]]"
-tags:
-  - work
-organization: 
-created: <%tp.date.now("YYYY-MM-DD")%>
+- '[[Journal]]'
+organization: null
 topics: []
+created: <%tp.date.now("YYYY-MM-DD")%>
+tags:
+- work
 ---
 
 # <%tp.file.title%>

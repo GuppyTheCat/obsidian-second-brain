@@ -1,13 +1,13 @@
 ---
 categories:
-  - "[[Events]]"
-tags:
-  - events/conferences
-start:
-end:
-location:
-url:
-host:
-description:
+- '[[Events]]'
+description: null
+end: null
+host: null
+location: null
 people: []
+start: null
+url: null
+tags:
+- events/conferences
 ---

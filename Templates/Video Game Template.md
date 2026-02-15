@@ -1,16 +1,16 @@
 ---
 categories:
-  - "[[Games]]"
-title: ""
+- '[[Games]]'
+title: ''
 aliases: []
-cover: 
-developer: "[[ ]]"
-publisher: "[[ ]]"
-release_date: 
-status: Backlog
-platforms: []
+cover: null
+developer: '[[ ]]'
 genres: []
-rating: 
+platforms: []
+publisher: '[[ ]]'
+rating: null
+release_date: null
+status: Backlog
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 

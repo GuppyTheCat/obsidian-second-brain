@@ -1,11 +1,11 @@
 ---
 categories:
-  - "[[Events]]"
+- '[[Events]]'
+description: null
+end: null
+location: null
+start: null
+url: null
 tags:
-  - events/concerts
-start:
-end:
-location:
-url:
-description:
+- events/concerts
 ---

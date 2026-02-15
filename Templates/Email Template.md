@@ -1,9 +1,9 @@
 ---
 categories:
-  - "[[Emails]]"
-created: <%tp.date.now("YYYY-MM-DD")%>
+- '[[Emails]]'
 organization: []
 people: []
-url:
-topics:
+topics: null
+url: null
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---

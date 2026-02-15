@@ -1,14 +1,14 @@
 ---
 categories:
-  - "[[Guitar Tabs]]"
-song:
-artist:
-album:
-tuning:
-difficulty:
-songsterr_url:
-ug_url:
-tabs:
+- '[[Guitar Tabs]]'
+album: null
+artist: null
+difficulty: null
+song: null
+songsterr_url: null
+tabs: null
+tuning: null
+ug_url: null
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 

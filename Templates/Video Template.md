@@ -1,14 +1,14 @@
 ---
 categories:
-  - "[[Videos]]"
+- '[[Videos]]'
 author: []
-youtube_channel: []
-url: ""
-duration: ""
-created: <%tp.date.now("YYYY-MM-DD")%>
-published: ""
-description: ""
+description: ''
+duration: ''
 topics: []
+url: ''
+youtube_channel: []
+published: ''
+created: <%tp.date.now("YYYY-MM-DD")%>
 tags: []
 ---
 

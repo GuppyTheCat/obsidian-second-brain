@@ -1,10 +1,10 @@
 ---
 categories:
-  - "[[Coffee]]"
-maker:
-producer:
+- '[[Coffee]]'
 country: []
-variety:
-process:
-rating:
+maker: null
+process: null
+producer: null
+rating: null
+variety: null
 ---

@@ -1,14 +1,14 @@
 ---
 categories:
-  - "[[Places]]"
-type:
-  - "[[Cities]]"
-loc:
-rating:
-created: <%tp.date.now("YYYY-MM-DD")%>
+- '[[Places]]'
 coordinates:
-  - "35.021041"
-  - "135.7556075"
+- '35.021041'
+- '135.7556075'
+loc: null
+rating: null
+type:
+- '[[Cities]]'
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 ## Trips
 

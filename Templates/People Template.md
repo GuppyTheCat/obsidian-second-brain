@@ -1,9 +1,9 @@
 ---
 categories:
-  - "[[People]]"
-birthday:
+- '[[People]]'
+birthday: null
+github: null
 organization: []
-github: 
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 ## Meetings

@@ -1,8 +1,8 @@
 ---
 categories:
-  - "[[Journal]]"
-  - "[[Literature Notes]]"
-created: <%tp.date.now("YYYY-MM-DD")%>
-source: "[[{{VALUE}}]]"
+- '[[Journal]]'
+- '[[Literature Notes]]'
+source: '[[{{VALUE}}]]'
 topics: []
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---

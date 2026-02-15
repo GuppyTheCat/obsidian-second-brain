@@ -1,13 +1,13 @@
 ---
 categories:
-  - "[[Meetings]]"
-type:
-  - "[[Job Interviews]]"
-organization:
-people: []
+- '[[Meetings]]'
 date: <%tp.date.now("YYYY-MM-DD")%>T<%tp.date.now("HH:mm")%>
-role:
-rating:
+organization: null
+people: []
+rating: null
+role: null
+type:
+- '[[Job Interviews]]'
 ---
 ## Questions and topics
 

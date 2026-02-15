@@ -1,12 +1,12 @@
 ---
 categories:
-  - "[[Posts]]"
-title:
+- '[[Posts]]'
+title: null
 author:
-  - "[[Me]]"
-url:
-created: <%tp.date.now("YYYY-MM-DD")%>
-published:
+- '[[Me]]'
+status: null
 topics: []
-status:
+url: null
+published: null
+created: <%tp.date.now("YYYY-MM-DD")%>
 ---

@@ -1,12 +1,12 @@
 ---
 categories:
-  - "[[Recipes]]"
-cuisine:
-type: []
-ingredients:
+- '[[Recipes]]'
 author: []
-url:
-rating:
+cuisine: null
+ingredients: null
+rating: null
+type: []
+url: null
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---
 ## Ingredients

@@ -1,10 +1,9 @@
 ---
-# tags: one of events/birthdays, events/concerts, events/conferences, events/trips, events/parties, events/world, events/meetups, events/interviews
 categories:
-  - "[[Events]]"
+- '[[Events]]'
+end: null
+location: null
+start: null
+url: null
 tags: []
-start:
-end:
-location:
-url:
 ---

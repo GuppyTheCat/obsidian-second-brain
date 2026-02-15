@@ -1,10 +1,10 @@
 ---
 categories:
-  - "[[Meetings]]"
-type: []
+- '[[Meetings]]'
 date: <%tp.date.now("YYYY-MM-DD")%>T<%tp.date.now("HH:mm")%>
-organization:
-loc:
+loc: null
+organization: null
 people: []
 topics: []
+type: []
 ---

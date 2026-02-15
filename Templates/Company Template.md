@@ -1,12 +1,12 @@
 ---
 categories:
-  - "[[Companies]]"
-name: 
-url: 
+- '[[Companies]]'
+name: null
+github: null
 industries: []
+parent: null
 people: []
 products: []
-parent: 
-github: 
+url: null
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---

@@ -1,18 +1,18 @@
 ---
-status: open
-priority: normal
-area: ""
-categories: "[[Projects]]"
-topics: []
-tags: []
-parent:
+categories: '[[Projects]]'
+area: ''
+color: null
+cover: null
+icon: null
 organization: []
-created: <%tp.date.now("YYYY-MM-DD")%>
+parent: null
+priority: normal
+status: open
+topics: []
+url: null
 year: <%tp.date.now("YYYY")%>
-url:
-cover:
-icon:
-color:
+created: <%tp.date.now("YYYY-MM-DD")%>
+tags: []
 ---
 
 # <% tp.file.title %>
