@@ -1,0 +1,26 @@
+filters:
+  and:
+    - categories.contains(link("PaaS"))
+    - '!file.path.contains("Templates/")'
+properties:
+  file.name:
+    displayName: Note
+  note.name:
+    displayName: Name
+  note.url:
+    displayName: URL
+  note.service_types:
+    displayName: Service types
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - name
+      - url
+      - service_types
+    columnSize:
+      file.name: 178
+      note.name: 178
+      note.url: 270
+      note.service_types: 200
