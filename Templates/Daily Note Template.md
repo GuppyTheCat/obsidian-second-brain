@@ -14,3 +14,6 @@ tags:
 ## Journal
 ### HH:mm
 Add some notes here...
+
+---
+![[Daily Note - Inbox]]

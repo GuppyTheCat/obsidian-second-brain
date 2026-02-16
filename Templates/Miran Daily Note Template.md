@@ -16,5 +16,10 @@ return function View() { return <MiranDailyNav />; }
 ## Projects
 
 ## Tasks
+### Active
+![[tasks-default.base#Work/active]]
+
+### Closed
+![[tasks-default.base#Work/closed today]]
 
 

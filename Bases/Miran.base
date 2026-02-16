@@ -1,0 +1,38 @@
+views:
+  - type: table
+    name: Work Notes
+    filters:
+      and:
+        - categories.contains(link("Journal"))
+        - organization.containsAny(link("Миран"), link("Miran"))
+        - '!file.tags.contains("daily")'
+        - '!file.path.startsWith("Templates/")'
+    order:
+      - file.name
+      - topics
+      - created
+    columnSize:
+      file.name: 473
+  - type: table
+    name: Daily Notes
+    filters:
+      and:
+        - categories.contains(link("Journal"))
+        - organization.containsAny(link("Миран"), link("Miran"))
+        - file.tags.contains("daily")
+        - '!file.path.startsWith("Templates/")'
+    order:
+      - file.name
+      - created
+    columnSize:
+      file.name: 252
+  - type: table
+    name: Templates
+    filters:
+      and:
+        - file.path.startsWith("Templates/")
+        - file.name.contains("Miran")
+    order:
+      - file.name
+    columnSize:
+      file.name: 252
