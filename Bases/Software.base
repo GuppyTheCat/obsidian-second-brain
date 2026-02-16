@@ -27,6 +27,9 @@ views:
     filters:
       and:
         - topics.contains(link("Obsidian plugins"))
+    order:
+      - file.name
+      - topics
     cardSize: 130
   - type: table
     name: Obsidian themes
