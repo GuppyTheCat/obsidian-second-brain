@@ -1,0 +1,11 @@
+filters:
+  and:
+    - file.tags.contains("political-parties")
+views:
+  - type: table
+    name: All parties
+    order:
+      - file.name
+      - created
+    columnSize:
+      file.name: 536
