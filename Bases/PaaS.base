@@ -16,11 +16,9 @@ views:
     name: All
     order:
       - file.name
-      - name
       - url
       - service_types
     columnSize:
       file.name: 178
-      note.name: 178
-      note.url: 270
+      note.url: 286
       note.service_types: 200
