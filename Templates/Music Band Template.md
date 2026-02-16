@@ -1,11 +1,9 @@
 ---
 categories:
-  - "[[People]]"
-tags:
-  - people/musicians
+  - "[[Music Band]]"
+url: null
 created: <%tp.date.now("YYYY-MM-DD")%>
 ---
-
 ## Albums
 
 ![[Albums.base#Artist]]

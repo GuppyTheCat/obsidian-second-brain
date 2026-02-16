@@ -2,7 +2,7 @@
 categories:
   - "[[People]]"
 tags:
-  - people/persons
+  - people/developers
 birthday: null
 github: null
 organization: []

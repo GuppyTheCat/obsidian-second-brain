@@ -13,6 +13,10 @@ properties:
     displayName: birthday
   note.github:
     displayName: github
+  note.organization:
+    displayName: organization
+  note.url:
+    displayName: url
 views:
   - type: table
     name: All people
@@ -22,6 +26,8 @@ views:
       - birthday
       - formula.Age
       - url
+      - file.tags
+      - github
     sort:
       - property: file.name
         direction: ASC
@@ -33,8 +39,211 @@ views:
         direction: DESC
     columnSize:
       file.name: 193
+      note.organization: 102
+      formula.Age: 99
+      note.url: 174
+      file.tags: 214
+  - type: table
+    name: Persons
+    filters:
+      and:
+        - file.tags.contains("people/persons")
+    order:
+      - file.name
+      - organization
+      - birthday
+      - formula.Age
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
       note.organization: 187
       formula.Age: 99
+  - type: table
+    name: Actors
+    filters:
+      and:
+        - file.tags.contains("people/actors")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Authors
+    filters:
+      and:
+        - file.tags.contains("people/authors")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Directors
+    filters:
+      and:
+        - file.tags.contains("people/directors")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Musicians
+    filters:
+      and:
+        - file.tags.contains("people/musicians")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Developers
+    filters:
+      and:
+        - file.tags.contains("people/developers")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Entrepreneurs
+    filters:
+      and:
+        - file.tags.contains("people/entrepreneurs")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Politicians
+    filters:
+      and:
+        - file.tags.contains("people/politicians")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Friends
+    filters:
+      and:
+        - file.tags.contains("people/friends")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Tattoo Artists
+    filters:
+      and:
+        - file.tags.contains("people/tattoo-artists")
+    order:
+      - file.name
+      - organization
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+      note.organization: 187
+  - type: table
+    name: Missing type tag
+    filters:
+      and:
+        - '!file.tags.containsAny("people/persons", "people/actors", "people/authors", "people/directors", "people/musicians", "people/developers", "people/entrepreneurs", "people/politicians", "people/friends", "people/tattoo-artists")'
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+  - type: table
+    name: Missing birthday
+    filters:
+      and:
+        - empty(note.birthday)
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+  - type: table
+    name: Missing organization
+    filters:
+      and:
+        - empty(note.organization)
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
+  - type: table
+    name: Needs dedupe
+    filters:
+      and:
+        - empty(note.organization)
+        - empty(note.birthday)
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 193
   - type: table
     name: Миран
     filters:
