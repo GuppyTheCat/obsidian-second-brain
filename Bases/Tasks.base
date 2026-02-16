@@ -64,9 +64,7 @@ views:
     order:
       - file.name
       - priority
-      - energy_level
-      - due
-      - contexts
+      - status
     sort:
       - property: priority
         direction: DESC
@@ -127,8 +125,10 @@ views:
     filters:
       and:
         - or:
-            - status == "completed"
-            - status == "cancelled"
+            - status == "done"
+            - status == "rejected"
+            - and:
+                - projects.contains(this.file.name)
     order:
       - file.name
       - status
@@ -136,6 +136,8 @@ views:
       - created
       - priority
     sort:
+      - property: file.name
+        direction: DESC
       - property: status
         direction: ASC
       - property: due
